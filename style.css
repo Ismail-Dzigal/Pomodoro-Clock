@@ -1,0 +1,144 @@
+body {
+  background-color: rgb(9, 13, 20);
+}
+
+#reset-p {
+  color: rgb(213, 218, 226);
+  font-size: 2em;
+  font-family: 'Arial';
+  font-weight: bold;
+}
+
+#reset-b {
+  color: red;
+  font-size: 2em;
+  font-family: 'Arial';
+  font-weight: bold;
+}
+
+.reset {
+  color: white;
+  font-size: 1.8em;
+}
+
+#pomodoro-reset {
+  color: rgb(213, 218, 226);
+}
+
+#break-reset {
+  color: red;
+}
+
+#header {
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.timer {
+  font-size: 20em;
+  color: rgb(213, 218, 226);
+  font-family: 'Anton', serif;
+  text-shadow: 0px 30px black;
+  display: block;
+}
+
+.start {
+  font-size: 2em;
+}
+
+.btn-info {
+  background-color: blue;
+  border: none;
+}
+
+.btn-danger {
+  background-color: red;
+  border: none;
+}
+
+.stop {
+  background-color: red;
+  border: none;
+  min-width: 5em;
+  border-radius: 10px;
+}
+
+.btn-success {
+  background-color: green;
+  border: none;
+  min-width: 5em;
+  border-radius: 10px;
+}
+
+.btn-success:focus {
+  background-color: green;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: green;
+  border: none;
+}
+
+.btn {
+  outline: none !important;
+}
+
+.stop:focus {
+  background-color: red;
+  border: none;
+  min-width: 5em;
+}
+
+.stop:hover {
+  background-color: red;
+  border: none;
+  min-width: 5em;
+}
+
+@media screen and (max-width: 699px){
+  
+  #reset-p {
+    font-size: 2em;
+    margin-left: 1em;
+  }
+
+  #reset-b {
+    font-size: 2em;
+    margin-left: 1em;
+  }
+
+  .reset {
+    font-size: 1em;
+  }
+  
+  #header {
+    font-size: 4em;
+  }
+  
+  .timer {
+    font-size: 10em;
+  }
+
+  .start {
+    font-size: 1.5em;
+  }
+  
+  #pomodoro-reset {
+    display: none;
+  }
+  
+  #break-reset {
+    display: none;
+  }
+  
+  br {
+    display: none;
+  }
+  
+  .col-sm-6 {
+    margin-bottom: 0.5em;
+  }
+  
+}
+       

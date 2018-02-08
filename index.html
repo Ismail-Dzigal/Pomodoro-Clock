@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Pomodoro Clock</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    
+  </head>
+
+  <body>
+    <div class="container" ng-app="Pomodoro" ng-controller="MainCtrl as main">
+      <div class="row text-center">
+        <div class="col-sm-6 reset">
+          <span id="pomodoro-reset">Pomodoro Timer</span>
+          <button class="btn btn-info" title="Increase pomodoro time" ng-click = "main.increasePomodoroTimer()">+</button>
+          <button class="btn btn-danger" title="Decrease pomodoro time" ng-click = "main.decreasePomodoroTimer()">-</button>
+          <br>
+          <span id="reset-p">{{main.pomodoroTimer/60 < 10 ? "0" + main.pomodoroTimer/60 + ":00" : main.pomodoroTimer/60 + ":00" }}</span>
+        </div>
+        <div class="col-sm-6 reset">
+          <span id="break-reset">Break Timer</span>
+          <button class="btn btn-info" title="Increase break time" ng-click = "main.increaseBreakTimer()">+</button>
+          <button class="btn btn-danger" title="Decrease break time" ng-click = "main.decreaseBreakTimer()">-</button>
+          <br>
+          <span id="reset-b">{{main.breakTimer/60 < 10 ? "0" + main.breakTimer/60 + ":00" : main.breakTimer/60 + ":00" }}</span>
+        </div>  
+      </div>
+          
+      <hr>
+      
+      <div class="row text-center">
+        <p id="header" ng-style="main.session ? {'color':'red'} : {'color':'rgb(213, 218, 226)'}">{{main.header}}</p>
+        <p class="timer" ng-style="main.session ? {'color':'red'} : {'color':'rgb(213, 218, 226)'}">{{main.mainTimer}}</p>
+        <button class="btn btn-success start" ng-click="main.startPomodoro()">{{main.startTxt}}</button>
+        <button class="btn btn-danger start stop" ng-click="main.stopPomodoro()">Stop</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+
+</html>
+
